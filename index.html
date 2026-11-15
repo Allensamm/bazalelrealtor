@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1e8">
+  <meta name="description" content="A better web address for real estate agents. Bazalel gives every realtor a beautiful, distinct website on one shared platform.">
+  <title>Bazalel — A digital home for real estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"}}
+  </script>
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Bazalel home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>bazalel<span class="brand-period">.</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#platform">The platform</a>
+      <a href="#showcase">The difference</a>
+      <a href="#process">How it works</a>
+    </nav>
+    <a class="nav-cta" href="#address">Find your address <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-photo" role="img" aria-label="Modern home opening onto a tranquil garden"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-copy">
+        <p class="eyebrow light"><span class="eyebrow-dot"></span> A digital home for real estate</p>
+        <h1 id="hero-title">Your name<br>on the door.<br><em>Our platform</em><br>behind it.</h1>
+        <p class="hero-sub">Distinctive websites for real estate professionals, all under one roof. Your brand gets its own address. You get more room to grow.</p>
+        <div class="hero-actions"><a class="button button-lime" href="#address">Find your address <span aria-hidden="true">↗</span></a><a class="text-link light-link" href="#platform">See how Bazalel works <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><canvas id="architecture"></canvas><div class="art-label"><span class="art-pulse"></span> A better foundation</div></div>
+      <div class="hero-bottom"><span>01 / 03&nbsp; — &nbsp;A new kind of real estate website</span><span class="scroll-cue">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span></div>
+      <div class="hero-stamp" aria-hidden="true"><span>BUILT FOR</span><strong>REAL<br>ESTATE</strong><span class="stamp-line"></span><span>MADE PERSONAL</span></div>
+    </section>
+
+    <section class="intro section-pad" id="platform">
+      <div class="section-index"><span>01</span><span class="index-line"></span><span>THE IDEA</span></div>
+      <div class="intro-main"><p class="eyebrow">A place to call your own</p><h2>Every agent deserves<br>a <em>better address.</em></h2></div>
+      <div class="intro-note"><p>Most real estate websites feel like a listing page. Bazalel is a home for your whole business: your story, your properties and the way you work.</p><a class="text-link dark-link" href="#address">Picture your site <span aria-hidden="true">↘</span></a></div>
+      <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>ONE PLATFORM</span><b>✳</b><span>YOUR OWN ADDRESS</span><b>✳</b><span>BUILT AROUND YOU</span><b>✳</b><span>ONE PLATFORM</span><b>✳</b><span>YOUR OWN ADDRESS</span><b>✳</b></div></div>
+    </section>
+
+    <section class="address-section section-pad" id="address">
+      <div class="section-index pale"><span>02</span><span class="index-line"></span><span>MAKE IT YOURS</span></div>
+      <div class="address-layout">
+        <div class="address-copy"><p class="eyebrow light"><span class="eyebrow-dot"></span> One platform. Your own corner.</p><h2>Put your<br>name <em>on it.</em></h2><p>Give clients a link that feels like you. Type a name and see how your Bazalel address could look.</p>
+          <label class="slug-label" for="slug-input">YOUR BAZALEL ADDRESS</label>
+          <div class="slug-input-wrap"><span class="slug-prefix">bazalel /</span><input id="slug-input" type="text" value="northstarrealty" maxlength="24" autocomplete="off" aria-describedby="slug-help"><span class="slug-suffix">↗</span></div><p class="slug-help" id="slug-help">A name that clients can remember.</p>
+        </div>
+        <div class="browser-card" aria-label="Preview of a realtor website">
+          <div class="browser-top"><div class="browser-dots"><i></i><i></i><i></i></div><div class="browser-address"><span class="lock-icon">▣</span><span class="preview-url">bazalel/northstarrealty</span></div><span class="browser-menu">•••</span></div>
+          <div class="preview-site"><div class="preview-photo"></div><div class="preview-shade"></div><div class="preview-nav"><b class="preview-name">NORTHSTAR <span>REALTY</span></b><span>HOMES&nbsp;&nbsp;&nbsp; OUR STORY&nbsp;&nbsp;&nbsp; CONTACT</span><b class="preview-menu">☰</b></div><div class="preview-content"><p>GOOD PLACES. GOOD PEOPLE.</p><h3>Find a place<br>to <em>belong.</em></h3><span class="preview-button">EXPLORE OUR HOMES&nbsp; ↗</span></div><div class="preview-caption">A sample agent website concept</div></div>
+        </div>
+      </div>
+      <div class="address-foot"><span>ONE SHARED FOUNDATION</span><span class="foot-line"></span><span>AN INDIVIDUAL FRONT DOOR</span></div>
+    </section>
+
+    <section class="showcase section-pad" id="showcase">
+      <div class="section-index"><span>03</span><span class="index-line"></span><span>THOUGHTFULLY DESIGNED</span></div>
+      <div class="showcase-head"><div><p class="eyebrow">A website that feels like the way you work</p><h2>More than a listing.<br><em>A point of view.</em></h2></div><p>From the first hello to the final handover, your website should make the right impression. Give your brand space to show what makes it different.</p></div>
+      <div class="showcase-frame"><div class="showcase-image"></div><div class="showcase-overlay"><span class="concept-tag"><span></span> WEBSITE CONCEPT</span><div><p>DESIGNED FOR THE DETAILS</p><h3>Quiet confidence.<br>Room to <em>belong.</em></h3></div><span class="concept-index">CONCEPT 001 &nbsp; / &nbsp; RESIDENTIAL</span></div><div class="showcase-side-note">A sample direction for a boutique property brand</div></div>
+      <div class="showcase-bottom"><span>01&nbsp; / &nbsp;A BRANDED HOME FOR YOUR BUSINESS</span><span>DESIGN THAT MEETS THE MOMENT&nbsp; ↗</span></div>
+    </section>
+
+    <section class="features section-pad">
+      <div class="section-index"><span>04</span><span class="index-line"></span><span>THE FOUNDATION</span></div>
+      <div class="feature-intro"><p class="eyebrow">Thoughtful from the ground up</p><h2>Everything in its<br><em>right place.</em></h2></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-number">01</span><div class="feature-icon icon-address" aria-hidden="true"><span>bz.</span><i>↗</i></div><h3>Your own address</h3><p>A simple, memorable link that puts your name in front of every client.</p><span class="feature-rule"></span></article>
+        <article class="feature-card"><span class="feature-number">02</span><div class="feature-icon icon-brand" aria-hidden="true"><i></i><i></i><i></i></div><h3>Your brand, in focus</h3><p>Bring your story to life with a website designed around the way you work.</p><span class="feature-rule"></span></article>
+        <article class="feature-card"><span class="feature-number">03</span><div class="feature-icon icon-foundation" aria-hidden="true"><i></i><i></i><i></i><i></i></div><h3>One shared foundation</h3><p>Every realtor site lives on Bazalel, giving your business a simpler way to get online.</p><span class="feature-rule"></span></article>
+      </div>
+    </section>
+
+    <section class="process section-pad" id="process">
+      <div class="section-index pale"><span>05</span><span class="index-line"></span><span>FROM IDEA TO ADDRESS</span></div>
+      <div class="process-layout"><div><p class="eyebrow light"><span class="eyebrow-dot"></span> The next move is yours</p><h2>Good work<br>starts with a<br><em>conversation.</em></h2><p class="process-note">Bring your name, your vision or the website you’ve outgrown. We’ll find the right direction for your real estate business.</p><a class="button button-lime" href="#top">Start with Bazalel <span aria-hidden="true">↗</span></a></div><div class="steps"><div class="step"><span>01</span><div><h3>Tell us what you need</h3><p>Your business, your audience, the feeling you want people to take away.</p></div><b>↗</b></div><div class="step"><span>02</span><div><h3>Shape your website</h3><p>We design around your brand and the way your clients find a home.</p></div><b>↗</b></div><div class="step"><span>03</span><div><h3>Make it your address</h3><p>Your site gets a home under Bazalel, ready to share with the world.</p></div><b>↗</b></div><div class="step-foot"><span>YOUR BUSINESS, YOUR ADDRESS</span><span class="foot-line"></span><span>ON BAZALEL</span></div></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>bazalel<span class="brand-period">.</span></span></a><span>Real estate websites, with room to grow.</span><a href="#top" class="back-top">BACK TO TOP ↑</a><span class="copyright">© 2026 BAZALEL</span></footer>
+</body>
+</html>
