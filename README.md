@@ -4,7 +4,7 @@ The public Bazalel landing page is in the repository root. Separate client sites
 
 ## Preview
 
-Open `index.html`, `invensiones/index.html`, or `theblessinghomes/index.html` in a modern browser, or serve this folder with a static file server. Google Fonts and sample real estate photography load from CDNs.
+Open `index.html`, `invensiones/index.html`, or `theblessinghomes/index.html` (plus its Homes, Buy, Sell, New Construction, Our Story, and Contact pages) in a modern browser, or serve this folder with a static file server. Google Fonts and sample real estate photography load from CDNs.
 
 ## Platform scope
 
