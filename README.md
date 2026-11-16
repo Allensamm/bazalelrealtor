@@ -1,11 +1,11 @@
 # Bazalel
 
-The public Bazalel landing page is in the repository root. A private-to-the-platform client site lives in `invensiones/` and is served at `/invensiones/` with its own services, zones, profile, and contact pages. No links to this client site are placed in the Bazalel landing page navigation.
+The public Bazalel landing page is in the repository root. Separate client sites live in `invensiones/` and `theblessinghomes/`; each is served from its own route and keeps its navigation separate from the Bazalel landing page.
 
 ## Preview
 
-Open `index.html` or `invensiones/index.html` in a modern browser, or serve this folder with a static file server. Google Fonts and sample real estate photography load from CDNs.
+Open `index.html`, `invensiones/index.html`, or `theblessinghomes/index.html` in a modern browser, or serve this folder with a static file server. Google Fonts and sample real estate photography load from CDNs.
 
 ## Platform scope
 
-The Bazalel landing page describes the shared-site concept. The `/invensiones/` pages are a self-contained client site; tenant management and automated site provisioning remain future platform work. Its inquiry form prepares a message for WhatsApp and leaves sending to the visitor.
+The Bazalel landing page describes the shared-site concept. The `/invensiones/` and `/theblessinghomes/` pages are self-contained client sites; tenant management and automated site provisioning remain future platform work. Inquiry forms prepare a message for the visitor to review before sending.
