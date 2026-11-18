@@ -35,3 +35,49 @@ if (message && !message.value) {
 document.querySelectorAll('[data-mailto-form]').forEach(form=>form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;const fields=new FormData(form);const body=[...fields.entries()].map(([key,value])=>`${key}: ${value}`).join('\n');const subject=encodeURIComponent(form.dataset.subject||'House of CB inquiry');window.location.href=`mailto:CindyOtten@yahoo.com?subject=${subject}&body=${encodeURIComponent(body)}`}));
 const mortgageForm=document.querySelector('#mortgageForm');
 if(mortgageForm){const update=()=>{const price=Number(document.querySelector('#price').value)||0;const down=Number(document.querySelector('#down').value)||0;const rate=(Number(document.querySelector('#rate').value)||0)/1200;const months=(Number(document.querySelector('#term').value)||30)*12;const loan=Math.max(0,price-down);const monthly=rate?loan*rate/(1-Math.pow(1+rate,-months)):loan/months;const money=value=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(value);document.querySelector('#paymentResult').textContent=money(monthly);document.querySelector('#loanAmount').textContent=money(loan);document.querySelector('#totalPaid').textContent=money(monthly*months)};mortgageForm.addEventListener('input',update);mortgageForm.addEventListener('change',update);update()}
+
+for (const gallery of document.querySelectorAll('.media-gallery')) {
+  const controls = gallery.querySelector('.media-controls');
+  if (!controls) continue;
+  const track = gallery.querySelector('.media-track');
+  const slides = [...track.children];
+  const counter = controls.querySelector('output');
+  const play = controls.querySelector('[data-play]');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let timer;
+  let current = 0;
+
+  function show(index) {
+    current = (index + slides.length) % slides.length;
+    track.scrollTo({ left: slides[current].offsetLeft, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+  }
+
+  function pause() {
+    window.clearInterval(timer);
+    timer = undefined;
+    if (play) play.textContent = 'Play slideshow';
+  }
+
+  function start() {
+    if (timer || !play) return;
+    timer = window.setInterval(() => show(current + 1), 6500);
+    play.textContent = 'Pause slideshow';
+  }
+
+  controls.hidden = false;
+  controls.querySelector('[data-prev]').addEventListener('click', () => { pause(); show(current - 1); });
+  controls.querySelector('[data-next]').addEventListener('click', () => { pause(); show(current + 1); });
+  track.addEventListener('scroll', () => {
+    current = Math.round(track.scrollLeft / track.clientWidth);
+    counter.textContent = (current + 1) + ' / ' + slides.length;
+  }, { passive: true });
+  if (play) {
+    play.addEventListener('click', () => timer ? pause() : start());
+    track.addEventListener('pointerdown', pause);
+    track.addEventListener('focus', pause);
+    document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
+    reducedMotion.addEventListener('change', pause);
+    if (reducedMotion.matches) pause();
+    else start();
+  }
+}

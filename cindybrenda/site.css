@@ -90,3 +90,58 @@ body { font-size: 16px; }
   .nav > a:not(.nav-cta) { font-size: .95rem; }
   .directory-tools input { width: 100%; }
 }
+
+/* Original House of CB photography, brokerage marks, and tours. */
+.header .brand {
+  align-self: stretch;
+  padding: 5px 20px;
+  background: #121212;
+}
+.brand-original { display: block; width: 104px; height: 65px; object-fit: contain; }
+.broker-original { width: min(180px, 100%); }
+.footer-bottom { align-items: center; }
+.mls-mark { width: 72px; height: auto; display: block; margin: 1.5rem 0 .5rem; }
+.media-gallery { min-width: 0; }
+.media-track {
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  overscroll-behavior-x: contain;
+}
+.media-slide { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; }
+.media-slide img { display: block; width: 100%; }
+.media-controls { display: flex; gap: .8rem; align-items: center; justify-content: center; padding: .65rem 0; flex-wrap: wrap; }
+.media-controls button {
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  padding: .45rem .8rem;
+  border-radius: .25rem;
+  cursor: pointer;
+}
+.media-controls output { min-width: 4ch; text-align: center; font-variant-numeric: tabular-nums; }
+.hero > .banner-gallery { margin: 32px 6% 0 0; align-self: center; }
+.banner-gallery .media-slide img { aspect-ratio: 16/9; object-fit: contain; background: #0d0d0d; }
+.banner-gallery .media-controls { font-size: .85rem; }
+.hero:has(.banner-gallery) { min-height: 0; padding-bottom: 18px; }
+.listing-gallery .media-slide img { aspect-ratio: 4/3; object-fit: contain; background: #181817; }
+.listing-sheet .listing-gallery { margin: 1.5rem 0; }
+.listing-cover { width: 100%; display: block; aspect-ratio: 3/2; object-fit: cover; border-radius: .25rem; margin-bottom: 1rem; }
+.video-tour iframe { width: 100%; aspect-ratio: 16/9; display: block; border: 0; margin-bottom: .75rem; background: #111; }
+.community-list img { width: 88px; height: 64px; object-fit: cover; margin: .5rem .75rem .5rem 0; }
+.paired-portrait { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; }
+.app-media { display: flex; align-items: center; justify-content: center; gap: 3rem; padding: 3rem 7%; }
+.app-media img { width: min(36%, 250px); height: auto; }
+.app-media h2, .sold-section h2 { font: 600 clamp(1.65rem, 3vw, 2.6rem)/1.1 var(--display); }
+.sold-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1.25rem; }
+.sold-card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; margin-bottom: .5rem; }
+.sold-card:hover span { text-decoration: underline; }
+@media (max-width: 700px) {
+  .header .brand { padding: 0 .65rem; }
+  .brand-original { height: 42px; width: 78px; }
+  .hero > .banner-gallery { margin: 0 5%; }
+  .app-media { gap: 1.25rem; }
+  .paired-portrait { width: 70px; height: 70px; }
+}
