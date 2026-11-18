@@ -145,3 +145,28 @@ body { font-size: 16px; }
   .app-media { gap: 1.25rem; }
   .paired-portrait { width: 70px; height: 70px; }
 }
+
+.directory-grid .property-card { position: relative; }
+.property-link::after { content: ""; position: absolute; inset: 0; border-radius: .5rem; }
+.card-photo { position: relative; }
+.card-photo-controls {
+  position: absolute;
+  bottom: .5rem;
+  right: .5rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  background: #151515ec;
+  color: white;
+  border-radius: .3rem;
+}
+.card-photo-controls button {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: 1.6rem/1 var(--sans);
+  cursor: pointer;
+}
+.card-photo-controls output { font-size: .85rem; font-variant-numeric: tabular-nums; }

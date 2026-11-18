@@ -81,3 +81,25 @@ for (const gallery of document.querySelectorAll('.media-gallery')) {
     else start();
   }
 }
+
+for (const photo of document.querySelectorAll('.card-photo')) {
+  const controls = photo.querySelector('.card-photo-controls');
+  if (!controls) continue;
+
+  const image = photo.querySelector('img');
+  const count = Number(photo.dataset.photoCount);
+  const address = photo.closest('article').querySelector('h3').textContent;
+  const folder = new URL('.', image.src);
+  let index = 0;
+
+  controls.hidden = false;
+  for (const button of controls.querySelectorAll('button')) {
+    button.addEventListener('click', () => {
+      index = (index + Number(button.dataset.step) + count) % count;
+      const number = index + 1;
+      image.src = new URL(number + '.jpg', folder).href;
+      image.alt = address + ', listing photo ' + number;
+      controls.querySelector('output').textContent = number + ' / ' + count;
+    });
+  }
+}
