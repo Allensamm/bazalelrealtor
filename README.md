@@ -1,10 +1,10 @@
 # Bazalel
 
-The public Bazalel landing page is in the repository root. Separate client sites live in `invensiones/` and `theblessinghomes/`; each is served from its own route and keeps its navigation separate from the Bazalel landing page.
+The public Bazalel landing page is in the repository root. Separate client sites live in `invensiones/`, `theblessinghomes/`, and `cindybrenda/`; each is served from its own route and keeps its navigation separate from the Bazalel landing page.
 
 ## Preview
 
-Open `index.html`, `invensiones/index.html`, or `theblessinghomes/index.html` (plus its Homes, Buy, Sell, New Construction, Our Story, and Contact pages) in a modern browser, or serve this folder with a static file server. Google Fonts and sample real estate photography load from CDNs.
+Open `index.html`, `invensiones/index.html`, `theblessinghomes/index.html`, or `cindybrenda/index.html` (with its Properties, Team, Home Value, Mortgage Calculator, and Contact pages) in a modern browser, or serve this folder with a static file server. Google Fonts and sample real estate photography load from CDNs.
 
 ## Platform scope
 
